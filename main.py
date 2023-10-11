@@ -30,7 +30,7 @@ def print_board(board):
     for i in range(size):
         for j in range(size):
             cell_value = board[i][j]
-            formatted_value = f"{cell_value:02}" if cell_value > 0 else "  "
+            formatted_value = f"{cell_value:02}" if cell_value > 0 else "00"  # Updated this line
             color = color_map.get(cell_value, '\033[37;1m')  # Default to white
 
             print(f"{color}{formatted_value}{end_color}", end=" ")
